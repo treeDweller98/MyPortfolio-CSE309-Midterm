@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Fahim Ahmed | Websites, Games and AI </title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/scrollspy-sidebar.css">
+        <script src="js/bootstrap.bundle.min.js" defer></script>
+        <script src="js/jquery-3.6.0.min.js"></script>
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/icons/logo.png" alt="">
+                </a>
+                
+                <button 
+                    class="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" 
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto justify-content-end">
+                        <li class="nav-item"> <a class=" nav-link active" aria-current="page" href="#"> Home </a>  </li>     
+                        <li class="nav-item"> <a class="nav-link" href="#"> Blog        </a>                      </li>     
+                        <li class="nav-item"> <a class="nav-link" href="#"> Portfolio   </a>                      </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> Contact     </a>                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="dropdown" id="navbutton">
+            <button 
+                class="btn dropdown-toggle rounded-circle" type="button"
+                id="dropdownMenuButton" data-bs-toggle="dropdown" 
+                aria-expanded="false" title="site nav"
+            >
+                <img class="icon-large" src="img/icons/nav.png" alt="">
+            </button>
+
+            <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                <h6 class="dropdown-header">Site Navigation</h6>    
+                <a class="dropdown-item active" aria-current="true" href="#">Home </a>
+                <a class="dropdown-item" href="#">Blog</a>  
+                <a class="dropdown-item" href="#">Portfolio</a>
+                <a class="dropdown-item" href="#">Contact</a>
+                <hr class="dropdown-divider">
+
+                <h6 class="dropdown-header">Socials</h6>  
+                <div class="d-flex justify-content-center">
+                    <a class="dropdown-item" onclick = "window.open('https://github.com/treeDweller98','_blank')"  title = "/treeDweller98">
+                        <img class="icon-small" src="img/icons/github.png" alt="github.com/treeDweller98">
+                    </a>
+
+                    <a class="dropdown-item" onclick = "window.open('https://instagram.com/tree_dweller98','_blank')"  title = "@tree_dweller98">
+                        <img class="icon-small" src="img/icons/insta.png" alt="instagram.com/tree_dweller98">
+                    </a>
+
+                    <a class="dropdown-item" onclick = "window.open('mailto:personal.fahim00@gmail.com','_blank')"  title = "personal.fahim00@gmail.com">
+                        <img class="icon-small" src="img/icons/mail.png" alt="personal.fahim00@gmail.com">
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function(){
+
+                    $(document).scroll(function() {
+                        var y = $(this).scrollTop();
+                        if (y > 500) {
+                        $('#navbutton').fadeIn();
+                        } else {
+                        $('#navbutton').fadeOut();
+                        }
+                    });
+
+                });
+            </script>
+        </nav>
+        
+        <aside class="scrollspy-bar">
+            <ul>
+                <li> <a href="#AboutMe" class="dot" data-scroll="AboutMe">    <span> about me  </span></a></li>
+                <li> <a href="#MyWork" class="dot" data-scroll="MyWork">      <span> my work   </span></a></li>
+                <li> <a href="#ContactMe" class="dot" data-scroll="ContactMe"><span> inquiries </span></a></li>
+            </ul>
+
+            <script>
+                $(document).ready(function(){
+
+                    $(window).on('scroll',function(){
+                  
+                        var link = $('.scrollspy-bar a.dot');
+                        var top = $(window).scrollTop();
+                    
+                        $('.sec').each(function(){
+                            var id = $(this).attr('id');
+                            var height = $(this).height();
+                            var offset = $(this).offset().top - 150;
+                            if(top >= offset && top < offset + height){
+                                link.removeClass('active');
+                                $('.scrollspy-bar').find('[data-scroll="' + id + '"]').addClass('active');
+                            }
+                        });
+                  
+                    });
+                  
+                });
+            </script>
+        </aside>
+
+        <main>
+            <section class="sec" id="AboutMe">
+
+                <div class="container">
+                    <h1 class="my-5"> all about me </h1>
+
+                    <div class="row gx-5 my-5">
+
+                        <div class="col-md-12 col-lg-6 shadow-lg p-1 mb-5 bg-light rounded">
+                            <div class="p-3 border bg-dark">
+
+                                <h2 class="text-center pt-5 pb-2">Hello!</h2>
+
+                                <div class="px-5 pb-3 border-primary">
+                                    <p>
+                                        I like making things and problem-solving in general. 
+                                        Recently I have discovered a new love for web development. 
+                                        I would like to pursue something AI-related for my senior project, 
+                                        hopefully breaking ground in Summer 2022.
+                                    </p>
+                                    <p>
+                                        As far as hobbies go, I play guitar (badly) and I take photographs sometime.
+                                        I have dabble in a bit of game development with PyGame
+                                    </p>
+                                    <p> Do check out my instagram, linked below, and tell me what you think. </p>
+                                </div>
+
+                                <section>
+                                    <h4 class="text-center py-3">connect with me</h4>
+
+                                    <div class="d-flex justify-content-evenly py-3"">
+                                        <a onclick = "window.open('https://github.com/treeDweller98','_blank')"  title = "/treeDweller98">
+                                            <img class="icon-large" src="img/icons/github.png" alt="github.com/treeDweller98">
+                                        </a>
+                                        <a onclick = "window.open('https://instagram.com/tree_dweller98','_blank')"  title = "@tree_dweller98">
+                                            <img class="icon-large" src="img/icons/insta.png" alt="instagram.com/tree_dweller98">
+                                        </a>
+                                        <a onclick = "window.open('mailto:personal.fahim00@gmail.com','_blank')"  title = "personal.fahim00@gmail.com">
+                                            <img class="icon-large" src="img/icons/mail.png" alt="personal.fahim00@gmail.com">
+                                        </a>
+                                    </div>
+
+                                    <address class="d-flex flex-column align-items-center py-3">
+                                        <img class="icon-small" src="img/icons/location.png" alt="">
+                                        <div class="text-center">
+                                            <strong> Fahim Inc.</strong> <br>
+                                            <small>
+                                                Room 545, House no.11, Road no.8 <br/>
+                                                Mohammadpur, Dhaka-1207 <br/>
+                                                Bangladesh
+                                            </small>
+                                        </div>
+                                    </address>
+                                </section>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-lg-6 shadow-lg p-1 mb-5 bg-dark rounded">
+                            <div class="p-3 border bg-light">
+                                <h2 class="text-center pt-5 pb-2">Education</h2>
+
+                                <h2 class="text-center pt-5 pb-2">Work Experience</h2>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p class="my-5">
+                        For a copy of my resume, please click
+                        <a href="img/other_assets/FahimAhmed_CV.pdf"> <strong>here</strong></a>
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="sec" id="MyWork">
+                
+                <div class="container">
+                    <h1 class="my-5">the work I'm proud of</h1>
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card text-white bg-dark shadow p-3 mb-2">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    </p>
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card text-white bg-dark shadow p-3 mb-4">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    </p>
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card text-white bg-dark shadow p-3 mb-4">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    </p>
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card text-white bg-dark shadow p-3 mb-4">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    </p>
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card text-white bg-dark shadow p-3 mb-4">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    </p>
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="card text-white bg-dark shadow p-3 mb-4 rounded">
+                                <img class="card-img-top" src="..." alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                                    </p>
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+
+                    <p class="my-5">
+                        For more of my work, check out my complete portfolio 
+                        <a href="#"> <strong>here</strong></a>
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="sec" id="ContactMe">
+
+                <div class="container mx-4 my-4">
+                    <h1 class="my-5">let's talk</h1>
+
+                    <div class="row transbox my-5 py-5 px-5">
+
+                        <div class="col-sm-12 col-lg-6">
+
+                            <form class="row g-3 needs-validation" novalidate>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="fname">First name:</label>
+                                    <input type="text" class="form-control" id="fname" name="fname" required>
+                                    <div class="valid-feedback">Hello!</div>
+                                    <div class="invalid-feedback">I need a name to call you by</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label" for="lname">Last name:</label>
+                                    <input class="form-control" type="text" id="lname" name="lname">
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label class="form-label" for="yourEmail">Email</label>
+                                    <input type="email" class="form-control" id="yourEmail" aria-describedby="emailHelp" required>
+                                    <div id="emailHelp" class="form-text">Your email will never be shared with anyone else.</div>
+                                    <div class="invalid-feedback">You must enter a valid email address</div>
+                                </div>
+
+                                <hr>
+                                <div class="col mb-3 d-flex justify-content-evenly">
+                                    <div class="form-check-inline px-2">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required>
+                                        <label class="form-check-label" for="inlineRadio1">I need a website</label>
+                                    </div>
+                                    <div class="form-check-inline px-2">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" required>
+                                        <label class="form-check-label" for="inlineRadio2">business/research proposal</label>
+                                    </div>
+                                    <div class="form-check-inline px-2">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" required>
+                                        <label class="form-check-label" for="inlineRadio3">other</label>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="messageText" class="form-label">Your Message</label>
+                                    
+                                    <input class="form-control" id="subject" placeholder="Subject" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a subject line
+                                    </div>
+                                    <hr>
+                                    <textarea class="form-control" id="messageText" rows="3" placeholder="Tell me what you want" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Oops it seems you haven't typed in a message yet...
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-center col-12 my-4">
+                                    <button type="submit" class="btn btn-primary rounded-pill py-2 px-5">Send Away!</button>
+                                </div>
+
+                                <script>
+                                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                    $(document).ready(function () {
+                                        'use strict'
+                                    
+                                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                        var forms = document.querySelectorAll('.needs-validation')
+                                    
+                                        // Loop over them and prevent submission
+                                        Array.prototype.slice.call(forms)
+                                        .forEach(function (form) {
+                                            form.addEventListener('submit', function (event) {
+                                            if (!form.checkValidity()) {
+                                                event.preventDefault()
+                                                event.stopPropagation()
+                                            }
+                                    
+                                            form.classList.add('was-validated')
+                                            }, false)
+                                        })
+                                    })()
+                                </script>
+                            </form>
+                            
+                        </div>
+
+                        <div class="col-sm-0 col-lg-1"></div>
+
+                        <div class="col-sm-12 col-lg-5">
+                            <img class="img-fluid rounded-3" src="img/photos/contactBanner.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+                
+        <footer>
+            <p>&copy 2022 Fahim Ahmed</p>
+            <small> 
+                Made with ♥ <br>
+                CSE309-1 Midterm. Spring 2022
+            </small>
+        </footer>
+    </body>
+</html>

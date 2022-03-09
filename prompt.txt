@@ -1,0 +1,26 @@
+Midterm Project:
+Create a portfolio website consisting of your original personal details, 
+educational details, job experience, research work, academic projects, 
+extra curricular activities etc. Basically create an online presence of your CV/Resume. 
+
+Website should be developed using Bootstrap 5. 
+
+Following are few sample sites to take inspiration from. 
+
+Sample Sites:
+https://sebkay.com/
+https://jonny.me/
+https://jacekjeznach.com/
+https://denisechandler.com/
+https://mattfarley.ca/
+https://www.choij.com/home
+https://www.dejan.works/
+
+Text Logo:
+https://flamingtext.com/
+https://cooltext.com/
+
+Free Resources:
+https://www.freepik.com/
+https://pixabay.com/
+http://www.colorexplorer.com/
