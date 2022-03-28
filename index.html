@@ -31,10 +31,10 @@
     
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto justify-content-end">
-                        <li class="nav-item"> <a class=" nav-link active" aria-current="page" href="#"> Home </a>  </li>     
-                        <li class="nav-item"> <a class="nav-link" href="#"> Blog        </a>                      </li>     
+                        <li class="nav-item"> <a class=" nav-link active" aria-current="page" href="index.html"> Home </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#"> Blog        </a>                      </li>
                         <li class="nav-item"> <a class="nav-link" href="#"> Portfolio   </a>                      </li>
-                        <li class="nav-item"> <a class="nav-link" href="#"> Contact     </a>                      </li>
+                        <li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact</a>             </li>
                     </ul>
                 </div>
             </div>
@@ -51,10 +51,10 @@
 
             <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
                 <h6 class="dropdown-header">Site Navigation</h6>    
-                <a class="dropdown-item active" aria-current="true" href="#">Home </a>
+                <a class="dropdown-item active" aria-current="true" href="index.html">Home </a>
                 <a class="dropdown-item" href="#">Blog</a>  
                 <a class="dropdown-item" href="#">Portfolio</a>
-                <a class="dropdown-item" href="#">Contact</a>
+                <a class="dropdown-item" href="contact-us.html">Contact</a>
                 <hr class="dropdown-divider">
 
                 <h6 class="dropdown-header">Socials</h6>  
@@ -350,62 +350,61 @@
                     <div class="row transbox my-5 py-5 px-5">
 
                         <div class="col-sm-12 col-lg-6">
-
-                            <form class="row g-3 needs-validation" novalidate>
+                            <form action="contact-us.php" class="row g-3 needs-validation" novalidate>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="fname">First name:</label>
-                                    <input type="text" class="form-control" id="fname" name="fname" required>
+                                    <input type="text" class="form-control" id="fname" name="firstName" required>
                                     <div class="valid-feedback">Hello!</div>
                                     <div class="invalid-feedback">I need a name to call you by</div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="lname">Last name:</label>
-                                    <input class="form-control" type="text" id="lname" name="lname">
+                                    <input class="form-control" type="text" id="lname" name="lastName">
                                 </div>
                                 <div class="col-md-12 mb-3">
-                                    <label class="form-label" for="yourEmail">Email</label>
-                                    <input type="email" class="form-control" id="yourEmail" aria-describedby="emailHelp" required>
+                                    <label class="form-label" for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required>
                                     <div id="emailHelp" class="form-text">Your email will never be shared with anyone else.</div>
                                     <div class="invalid-feedback">You must enter a valid email address</div>
                                 </div>
-
+        
                                 <hr>
                                 <div class="col mb-3 d-flex justify-content-evenly">
                                     <div class="form-check-inline px-2">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required>
+                                        <input class="form-check-input" type="radio" name="type" id="inlineRadio1" value="website" required>
                                         <label class="form-check-label" for="inlineRadio1">I need a website</label>
                                     </div>
                                     <div class="form-check-inline px-2">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" required>
+                                        <input class="form-check-input" type="radio" name="type" id="inlineRadio2" value="proposal" required>
                                         <label class="form-check-label" for="inlineRadio2">business/research proposal</label>
                                     </div>
                                     <div class="form-check-inline px-2">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" required>
+                                        <input class="form-check-input" type="radio" name="type" id="inlineRadio3" value="other" required>
                                         <label class="form-check-label" for="inlineRadio3">other</label>
                                     </div>
                                 </div>
                                 <hr>
-
+        
                                 <div class="col-md-12 mb-3">
-                                    <label for="messageText" class="form-label">Your Message</label>
+                                    <label class="form-label">Your Message</label>
                                     
-                                    <input class="form-control" id="subject" placeholder="Subject" required>
+                                    <input class="form-control" id="subject" placeholder="Subject" name="subjectLine" required>
                                     <div class="invalid-feedback">
                                         Please provide a subject line
                                     </div>
                                     <hr>
-                                    <textarea class="form-control" id="messageText" rows="3" placeholder="Tell me what you want" required></textarea>
+                                    <textarea class="form-control" rows="5" placeholder="Type your message here" name="message" required></textarea>
                                     <div class="invalid-feedback">
                                         Oops it seems you haven't typed in a message yet...
                                     </div>
                                 </div>
-
+        
                                 <div class="d-flex justify-content-center col-12 my-4">
-                                    <button type="submit" class="btn btn-primary rounded-pill py-2 px-5">Send Away!</button>
+                                    <button type="submit" value="Submit" class="btn btn-primary rounded-pill py-2 px-5">Send it!</button>
                                 </div>
-
+        
                                 <script>
-                                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                                    // JavaScript for disabling form submissions if there are invalid fields
                                     $(document).ready(function () {
                                         'use strict'
                                     
@@ -427,7 +426,6 @@
                                     })()
                                 </script>
                             </form>
-                            
                         </div>
 
                         <div class="col-sm-0 col-lg-1"></div>

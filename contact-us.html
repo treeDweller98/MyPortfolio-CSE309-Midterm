@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/contact-us.css">
+    <link rel="stylesheet" href="css/scrollspy-sidebar.css">
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/icons/logo.png" alt="">
+            </a>
+            
+            <button 
+                class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" 
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto justify-content-end">
+                    <li class="nav-item"> <a class=" nav-link active" aria-current="page" href="#"> Home </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Blog        </a>                      </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Portfolio   </a>                      </li>
+                    <li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact</a>             </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="sec"">
+
+            <div class="container mx-4 my-4">
+                <h1 class="my-5">Contact Me</h1>
+
+                <div class="row transbox my-5 py-5 px-5">
+
+                    <div class="col-sm-12 col-lg-6">
+                        <form action="contact-us.php" class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label" for="fname">First name:</label>
+                                <input type="text" class="form-control" id="fname" name="firstName" required>
+                                <div class="valid-feedback">Hello!</div>
+                                <div class="invalid-feedback">I need a name to call you by</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label" for="lname">Last name:</label>
+                                <input class="form-control" type="text" id="lname" name="lastName">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label" for="email">Email</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required>
+                                <div id="emailHelp" class="form-text">Your email will never be shared with anyone else.</div>
+                                <div class="invalid-feedback">You must enter a valid email address</div>
+                            </div>
+
+                            <hr>
+                            <div class="col mb-3 d-flex justify-content-evenly">
+                                <div class="form-check-inline px-2">
+                                    <input class="form-check-input" type="radio" name="type" id="inlineRadio1" value="website" required>
+                                    <label class="form-check-label" for="inlineRadio1">I need a website</label>
+                                </div>
+                                <div class="form-check-inline px-2">
+                                    <input class="form-check-input" type="radio" name="type" id="inlineRadio2" value="proposal" required>
+                                    <label class="form-check-label" for="inlineRadio2">business/research proposal</label>
+                                </div>
+                                <div class="form-check-inline px-2">
+                                    <input class="form-check-input" type="radio" name="type" id="inlineRadio3" value="other" required>
+                                    <label class="form-check-label" for="inlineRadio3">other</label>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label">Your Message</label>
+                                
+                                <input class="form-control" id="subject" placeholder="Subject" name="subjectLine" required>
+                                <div class="invalid-feedback">
+                                    Please provide a subject line
+                                </div>
+                                <hr>
+                                <textarea class="form-control" rows="5" placeholder="Type your message here" name="message" required></textarea>
+                                <div class="invalid-feedback">
+                                    Oops it seems you haven't typed in a message yet...
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-center col-12 my-4">
+                                <button type="submit" value="Submit" class="btn btn-primary rounded-pill py-2 px-5">Send</button>
+                            </div>
+
+                            <script>
+                                // JavaScript for disabling form submissions if there are invalid fields
+                                $(document).ready(function () {
+                                    'use strict'
+                                
+                                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                    var forms = document.querySelectorAll('.needs-validation')
+                                
+                                    // Loop over them and prevent submission
+                                    Array.prototype.slice.call(forms)
+                                    .forEach(function (form) {
+                                        form.addEventListener('submit', function (event) {
+                                        if (!form.checkValidity()) {
+                                            event.preventDefault()
+                                            event.stopPropagation()
+                                        }
+                                
+                                        form.classList.add('was-validated')
+                                        }, false)
+                                    })
+                                })()
+                            </script>
+                        </form>
+                    </div>
+
+                    <div class="col-sm-0 col-lg-1"></div>
+
+                    <section class="col-sm-12 col-lg-5">
+                        <h4 class="text-center py-3">connect with me</h4>
+
+                        <div class="d-flex justify-content-evenly py-3"">
+                            <a onclick = "window.open('https://github.com/treeDweller98','_blank')"  title = "/treeDweller98">
+                                <img class="icon-large" src="img/icons/github.png" alt="github.com/treeDweller98">
+                            </a>
+                            <a onclick = "window.open('https://instagram.com/tree_dweller98','_blank')"  title = "@tree_dweller98">
+                                <img class="icon-large" src="img/icons/insta.png" alt="instagram.com/tree_dweller98">
+                            </a>
+                            <a onclick = "window.open('mailto:personal.fahim00@gmail.com','_blank')"  title = "personal.fahim00@gmail.com">
+                                <img class="icon-large" src="img/icons/mail.png" alt="personal.fahim00@gmail.com">
+                            </a>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center align-items-center py-5">
+                            <img class="icon-small" src="img/icons/phone.png" alt="">
+                            <div class="text-center py-3 px-3">+880-193-3452 <br> +880-018-5946</div>
+                        </div>
+                        
+                        <address class="d-flex flex-column align-items-center pt-3">
+                            <img class="icon-small" src="img/icons/location.png" alt="">
+                            <div class="text-center">
+                                <strong> Fahim Inc.</strong> <br>
+                                <small>
+                                    Room 545, House no.11, Road no.8 <br/>
+                                    Mohammadpur, Dhaka-1207 <br/>
+                                    Bangladesh
+                                </small>
+                            </div>
+                        </address>
+                    </section>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy 2022 Fahim Ahmed</p>
+        <small> 
+            Made with ♥ <br>
+            CSE309-1 Assignment 2. Spring 2022
+        </small>
+    </footer>
+</body>
+</html>
