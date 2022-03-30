@@ -350,7 +350,10 @@
                     <div class="row transbox my-5 py-5 px-5">
 
                         <div class="col-sm-12 col-lg-6">
-                            <form action="contact-us.php" class="row g-3 needs-validation" novalidate>
+                            <form 
+                                action="contact-us.php" method="POST" class="row g-3 needs-validation" novalidate
+                                onsubmit="return confirm('Are you sure you want to submit?');"
+                            >
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" for="fname">First name:</label>
                                     <input type="text" class="form-control" id="fname" name="firstName" required>

@@ -6,6 +6,7 @@ body {
     background-color: #282b33;
 }
 main {
+    min-height: 80vh;
     margin: 3%;
 }
 footer {

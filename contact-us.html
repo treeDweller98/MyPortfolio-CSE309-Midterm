@@ -8,8 +8,7 @@
     <title>Contact Us</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/contact-us.css">
-    <link rel="stylesheet" href="css/scrollspy-sidebar.css">
+    <link rel="stylesheet" href="css/custom.css">
     <script src="js/bootstrap.bundle.min.js" defer></script>
     <script src="js/jquery-3.6.0.min.js"></script>
 </head>
@@ -48,7 +47,10 @@
                 <div class="row transbox my-5 py-5 px-5">
 
                     <div class="col-sm-12 col-lg-6">
-                        <form action="contact-us.php" class="row g-3 needs-validation" novalidate>
+                            <form 
+                                action="contact-us.php" method="POST" class="row g-3 needs-validation" novalidate
+                                onsubmit="return confirm('Are you sure you want to submit?');"
+                            >
                             <div class="col-md-6 mb-3">
                                 <label class="form-label" for="fname">First name:</label>
                                 <input type="text" class="form-control" id="fname" name="firstName" required>
