@@ -29,10 +29,10 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto justify-content-end">
-                    <li class="nav-item"> <a class=" nav-link active" aria-current="page" href="#"> Home </a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#"> Blog        </a>                      </li>
-                    <li class="nav-item"> <a class="nav-link" href="#"> Portfolio   </a>                      </li>
-                    <li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact</a>             </li>
+                    <li class="nav-item"> <a class=" nav-link" href="index.html"> Home </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Blog</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Portfolio</a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="contact-us.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -53,7 +53,7 @@
                     $diemsg = "ERROR: Could not connect. " . mysqli_connect_error();
                     die( "<strong class='text-light text-center'>$diemsg</strong>" );
                 }
-                
+
                 // Get data from form
                 $firstName = $_POST['firstName'];
                 $lastName= $_POST['lastName'];
